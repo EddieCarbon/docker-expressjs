@@ -5,7 +5,7 @@ metadata:
   labels:
     app: app
 spec:
-  replicas: 1  # Możesz zwiększyć liczbę replik, jeśli chcesz skalować
+  replicas: 3
   selector:
     matchLabels:
       app: app
@@ -17,6 +17,7 @@ spec:
       containers:
         - name: app
           image: myapp:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
           env:
@@ -34,4 +35,4 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-  type: LoadBalancer  # Możesz zmienić na ClusterIP, jeśli nie potrzebujesz zewnętrznego dostępu
+  type: LoadBalancer
