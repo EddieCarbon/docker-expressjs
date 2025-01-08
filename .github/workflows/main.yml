@@ -25,6 +25,10 @@ jobs:
       working-directory: ./app  # Ustawienie katalogu roboczego na folder 'app'
       run: npm install
 
+    - name: Test application
+      working-directory: ./app
+      run: npm test
+
     - name: Build application
       working-directory: ./app  # Ustawienie katalogu roboczego na folder 'app'
       run: npm start
