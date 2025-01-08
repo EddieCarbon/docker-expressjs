@@ -12,7 +12,7 @@ Docker Compose - narzędzie do zarządzania wieloma kontenerami Docker, które p
 Instalacja
 
 Sklonuj repozytorium na swoje lokalne środowisko:
-git clone https://github.com/TwójUżytkownik/express-api.git
+git clone https://github.com/EddieCarbon/docker-expressjs.git
 Zainstaluj zależności:
 Przejdź do folderu app i zainstaluj zależności za pomocą npm:
 
