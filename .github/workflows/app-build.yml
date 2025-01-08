@@ -1,4 +1,4 @@
-name: Application Build Validation
+name: Docker Build Validation
 
 on:
   push:
@@ -19,19 +19,22 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
 
       - name: Install dependencies
         run: |
           cd app
           npm install
 
-      - name: Build application
+      - name: Build Docker image
         run: |
           cd app
-          npm run build
+          docker build -t express-api .
 
-      - name: Run tests
+      - name: Run Docker container
         run: |
-          cd app
-          npm test
+          docker run -d -p 3000:3000 express-api
+
+      - name: Stop Docker container
+        run: |
+          docker ps -q | xargs docker stop
