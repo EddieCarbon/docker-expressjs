@@ -1,5 +1,6 @@
 Express API
 
+
 Aplikacja API stworzona przy użyciu Node.js i Express.js, która służy jako podstawowa baza do budowy aplikacji backendowej. W projekcie wykorzystano bazę danych MongoDB do przechowywania danych, a aplikacja jest przygotowana do uruchomienia w kontenerach Docker.
 
 Technologie
