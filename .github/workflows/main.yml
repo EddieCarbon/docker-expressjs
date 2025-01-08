@@ -27,7 +27,7 @@ jobs:
 
     - name: Build application
       working-directory: ./app  # Ustawienie katalogu roboczego na folder 'app'
-      run: npm run build
+      run: npm start
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
