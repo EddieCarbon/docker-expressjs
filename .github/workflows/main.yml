@@ -22,13 +22,15 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
+      working-directory: ./app  # Ustawienie katalogu roboczego na folder 'app'
       run: npm install
 
     - name: Build application
+      working-directory: ./app  # Ustawienie katalogu roboczego na folder 'app'
       run: npm run build
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
-        path: ./build
+        path: ./app/build
